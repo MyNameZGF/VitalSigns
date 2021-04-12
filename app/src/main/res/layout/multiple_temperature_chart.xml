@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingConstraints">
+
+    <com.xincheng.vitalsigns.ui.view.TemperatureChartView
+        android:id="@+id/temperatureChartView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:tep_title_bg="@color/item_bg"
+        app:tep_title_column_count="7"
+        app:tep_title_row_count="3"
+        app:tep_title_row_height="100dp"
+        app:tep_title_text_size="20sp"
+        app:tep_title_text_color="@color/titleColor"
+        app:tep_left_bg="@color/item_bg"
+        app:tep_left_text_size="24sp"
+        app:tep_left_text_color="@color/titleColor"
+        app:tep_center_cell_row_count="10"
+        app:tep_center_cell_child_1_level_column_count="2"
+        app:tep_center_cell_child_2_level_column_count="6"
+        app:tep_center_cell_row_child="5"
+        app:tep_center_cell_row_height="150dp"
+        app:tep_center_cell_title_2_level_size="18sp"
+        app:tep_center_cell_title_2_level_color="@color/titleColor"
+        app:tep_center_cell_title_color="@color/titleColor"
+        app:tep_center_cell_title_size="20sp"
+        app:tep_cell_line_2_level_color="@color/titleColor80"
+        app:tep_cell_line_color="@color/titleColor"
+        app:tep_cell_line_2_level_size="0.5"
+        app:tep_cell_line_size="2"
+        app:tep_bottom_row_count="8"
+        app:tep_bottom_row_height="60dp"
+        app:tep_bottom_bg="@color/item_bg"
+        app:tep_bottom_text_color="@color/titleColor"
+        app:tep_bottom_text_size="20sp" />
+
+</android.support.constraint.ConstraintLayout>

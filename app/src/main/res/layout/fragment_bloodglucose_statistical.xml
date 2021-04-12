@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:paddingBottom="16dp"
+    tools:ignore="MissingConstraints">
+
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/st_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/before"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        app:stv_isShowState="true"
+        app:stv_state_drawable="@drawable/shape_3_blue"
+        app:stv_state_drawable_mode="left"
+        app:stv_state_drawable_padding_left="0dp"
+        app:stv_state_drawable_width="30dp"
+        app:stv_state_drawable_height="3dp"
+        android:paddingLeft="35dp"
+        app:stv_pressBgColor="@color/item_bg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/st_after"
+        app:layout_constraintHorizontal_chainStyle="packed" />
+
+
+    <com.coorchice.library.SuperTextView
+        android:id="@+id/st_after"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/after"
+        android:textColor="@color/colorGreen"
+        android:textSize="16sp"
+        app:stv_isShowState="true"
+        app:stv_state_drawable="@drawable/shape_3_green"
+        app:stv_state_drawable_mode="left"
+        app:stv_state_drawable_padding_left="0dp"
+        app:stv_state_drawable_width="30dp"
+        app:stv_state_drawable_height="3dp"
+        android:paddingLeft="35dp"
+        app:stv_pressBgColor="@color/item_bg"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/st_previous"
+        android:layout_marginLeft="20dp" />
+
+    <com.xincheng.linechart.SuitLines
+        android:id="@+id/suitlines"
+        app:layout_constraintTop_toBottomOf="@+id/st_after"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_max_value"
+        android:layout_marginBottom="16dp"
+        android:background="@android:color/transparent"
+        app:needEdgeEffect="false"
+        app:needClickHint="false"
+        app:maxOfVisible="21"
+        app:colorHint="@color/titleColor80"
+        app:xyColor="@color/titleColor"
+        app:lineType="curve" />
+    
+    <TextView
+        android:id="@+id/tv_max_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorRed"
+        android:textSize="16sp"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toTopOf="@+id/tv_max_time"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_max_time"
+        app:layout_constraintRight_toRightOf="@+id/tv_max_time"
+        android:layout_marginBottom="5dp"/>
+
+    <TextView
+        android:id="@+id/tv_max_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleColor80"
+        android:textSize="14sp"
+        android:text="@string/no_data"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_average_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:text="@string/no_data"
+        app:layout_constraintTop_toTopOf="@+id/tv_max_value"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_max_value"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_average_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleColor80"
+        android:textSize="14sp"
+        android:text="@string/no_data"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_average_value"
+        app:layout_constraintRight_toRightOf="@+id/tv_average_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_average_value"
+        android:layout_marginTop="5dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_min_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorGreen"
+        android:textSize="16sp"
+        android:text="@string/no_data"
+        app:layout_constraintTop_toTopOf="@+id/tv_max_value"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_max_value"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_min_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleColor80"
+        android:textSize="14sp"
+        android:text="@string/no_data"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_min_value"
+        app:layout_constraintRight_toRightOf="@+id/tv_min_value"
+        app:layout_constraintTop_toBottomOf="@+id/tv_min_value"
+        android:layout_marginTop="5dp"/>
+
+</android.support.constraint.ConstraintLayout>

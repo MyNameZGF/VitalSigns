@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:background="@color/item_click_bg"
+    android:id="@+id/item"
+    tools:ignore="MissingConstraints">
+
+    <ImageView
+        android:id="@+id/iv_connected"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_wifiName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/iv_connected"
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/titleColor"
+        android:textSize="16sp"/>
+
+    <ImageView
+        android:id="@+id/iv_lock"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_signal"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/iv_signal"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:clickable="false"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/iv_info"
+        android:layout_marginRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/iv_info"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/ic_launcher_round"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:clickable="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_wifiName"
+        app:layout_constraintRight_toRightOf="@+id/iv_info"
+        android:background="#DDDDDD"/>
+
+
+</android.support.constraint.ConstraintLayout>

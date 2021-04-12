@@ -1,0 +1,229 @@
+<resources>
+    <string name="app_name">VitalSigns</string>
+    <string name="press_again_exit">再按一次退出</string>
+    <string name="back">返回</string>
+    <string name="no_data">----</string>
+    <string name="select_patient">选则病人</string>
+    <string name="select_patient_tip">可直接扫描病人腕带选择病人</string>
+
+
+    <string name="setting">设置</string>
+    <string name="language_title">语言设置</string>
+
+
+    <string name="show_setting">显示设置</string>
+    <string name="sleep_setting">休眠设置</string>
+    <string name="luminance">亮度</string>
+    <string name="autoAjust">自动调节</string>
+    <string name="eyeshieldMode">护眼模式</string>
+
+
+    <string name="five_m">5分钟</string>
+    <string name="fifteen_m">15分钟</string>
+    <string name="thirty_m">30分钟</string>
+    <string name="nvver">永不</string>
+
+
+    <string name="voice_setting">声音设置</string>
+    <string name="voice">音量</string>
+    <string name="voiceTip">语音提醒</string>
+    <string name="mute">静音</string>
+
+
+    <string name="wlan">WLAN</string>
+    <string name="ble">蓝牙</string>
+    <string name="ble_setting">蓝牙设置</string>
+    <string name="wlan_setting">WIFI设置</string>
+    <string name="connet_wlan">可用WIFI</string>
+
+    <string name="current_model">当前显示模块</string>
+    <string name="drag_tip">按住拖动调整模块顺序</string>
+    <string name="add_model">可添加模块</string>
+    <string name="no_add_model">暂无可添加模块</string>
+
+    <string name="sigs_measure_title">生命体征测量</string>
+    <string name="save_report">保存记录</string>
+    <string name="reset_measure">重置测量</string>
+    <string name="uptitled">偏高</string>
+    <string name="input_enter">手动输入</string>
+    <string name="before">餐前</string>
+    <string name="after">餐后</string>
+    <string name="swith">切换</string>
+    <string name="body_temperature">体温 [°C]</string>
+    <string name="blood_oxygen">血氧 [%]</string>
+    <string name="blood_pressure">血压 [mmHg]</string>
+    <string name="blood_glucose">血糖 [mmol/L]</string>
+    <string name="pulse_rate">脉率 [bpm]</string>
+    <string name="perfusion_index">灌注指数 [PI]</string>
+    <string name="breathe">呼吸 [rpm]</string>
+    <string name="excrement">大便 [次/日]</string>
+    <string name="bow">血氧波</string>
+    <string name="search_hint">请输入病人编号、姓名进行搜索</string>
+    <string name="measured">今日已测量</string>
+    <string name="unMeasure">今日未测量</string>
+
+    <string name="measureCount">测量次数:</string>
+    <string name="measureTime">测量时间:</string>
+    <string name="queryReport">查房记录</string>
+    <string name="sy">以同步</string>
+    <string name="dis_sy">未同步</string>
+    <string name="sy_fial">同步失败</string>
+    <string name="out">退出</string>
+
+
+    <string name="delete">删除</string>
+    <string name="history_record">历史统计</string>
+    <string name="sure_reset_measure_data">确定重置测量数据吗？</string>
+    <string name="sure_delete_current_data">确定删除此条记录吗？</string>
+    <string name="will_clear_current_measure_data">将会清空本次测量数据</string>
+    <string name="will_delete_current_device_data">将会删除在此设备上的记录</string>
+    <string name="query">确定</string>
+    <string name="cancel">取消</string>
+    <string name="reset">重置</string>
+    <string name="save_sucess">保存成功</string>
+
+
+    <string name="measureTimes">测量时间</string>
+    <string name="temp">体温</string>
+    <string name="bloodOxygen">血氧</string>
+    <string name="bloodPressure">血压</string>
+    <string name="bloodGlucose">血糖</string>
+    <string name="pulseRate">脉率</string>
+    <string name="breathes">呼吸</string>
+    <string name="excrements">大便</string>
+    <string name="measurer">测量人</string>
+    <string name="syncStatus">同步状态</string>
+
+
+    <string name="dayOf7Temp">七日体温统计</string>
+    <string name="dayOf7BloodOxygen">七日血氧统计</string>
+    <string name="dayOf7BloodPressure">七日血压统计</string>
+    <string name="dayOf7BloodGlucose">七日血糖统计</string>
+    <string name="dayOf7PulseRate">七日脉率统计</string>
+    <string name="dayOf7Breathes">七日呼吸统计</string>
+    <string name="dayOf7Excrements">七日大便统计</string>
+    <string name="pulse">脉搏</string>
+    <string name="unit_minute">(次/分)</string>
+    <string name="unit_temp">( °C )</string>
+
+    <string name="nurse_signature">护士签名:</string>
+    <string name="doctor_signature">医生签名:</string>
+    <string name="status_no_date">暂无数据!</string>
+
+    <!--登陆-->
+    <string name="measure_login_title">生命体征监测系统</string>
+    <string name="payment_account_id">请输入你的账号</string>
+    <string name="payment_password">请输入你的密码</string>
+    <string name="login_btn">立即登录</string>
+    <string name="login_register_btn">注册账号</string>
+    <string name="login_password_btn">忘记密码</string>
+    <!--注册-->
+    <string name="payment_job_id">请输入您的工作证号</string>
+    <string name="payment_password2">请输入您要设置的密码</string>
+    <string name="register_btn">立即注册</string>
+    <string name="do_login">去登录</string>
+    <!--忘记密码-->
+    <string name="name">姓名</string>
+    <string name="number">工号</string>
+    <string name="dept">科室</string>
+    <string name="payment_name">请输入您的姓名</string>
+    <string name="payment_dept">请输入您的科室</string>
+    <string name="retrieve_password_btn">找回密码</string>
+    <string name="return_login">返回登陆</string>
+    <string-array name="select_dept">
+        <item>内科</item>
+        <item>外科</item>
+        <item>美容科</item>
+        <item>骨科</item>
+    </string-array>
+    <string name="new_password">新密码</string>
+    <string name="reset_password_login">重置密码去登录</string>
+    <string name="payment_new_password">请设置您的新密码</string>
+
+    <string-array name="array_menu">
+        <item>自定义监测模块</item>
+        <item>蓝牙连接</item>
+        <item>声音/警报提示</item>
+        <item>无线连接</item>
+        <item>系统语言</item>
+        <item>屏幕模式</item>
+        <item>修改密码</item>
+    </string-array>
+
+    <string-array name="array_language">
+        <item>简体中文</item>
+        <item>繁体中文</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="array_screen_time">
+        <item>5分钟</item>
+        <item>15分钟</item>
+        <item>30分钟</item>
+        <item>永不</item>
+    </string-array>
+
+    <string-array name="array_measure">
+        <item>体温 [°C]</item>
+        <item>血氧 [%]</item>
+        <item>血压 [mmHg]</item>
+        <item>血糖 [mmol/L]</item>
+        <item>脉率 [bpm]</item>
+<!--        <item>灌注指数 [PI]</item>-->
+        <item>呼吸 [rpm]</item>
+        <item>小便 [日]</item>
+        <item>大便 [日]</item>
+        <item>血氧波</item>
+    </string-array>
+
+    <string-array name="array_custom">
+        <item>体温</item>
+        <item>血氧</item>
+        <item>血压</item>
+        <item>血糖</item>
+        <item>脉率</item>
+        <item>呼吸</item>
+        <item>小便</item>
+        <item>大便</item>
+        <item>血氧波</item>
+    </string-array>
+
+    <string-array name="blood_sugar_type">
+        <item>随机</item>
+        <item>早餐前</item>
+        <item>早餐后</item>
+        <item>午餐前</item>
+        <item>午餐后</item>
+        <item>晚餐前</item>
+        <item>晚餐后</item>
+        <item>睡前</item>
+    </string-array>
+
+
+    <string-array name="selectBingRen">
+        <item >请选择</item>
+        <item >未测病人</item>
+        <item >以测病人</item>
+    </string-array>
+
+
+        <string name="cogradient_button">同步</string>
+        <string name="sure_sy_current_data">确定同步此条记录吗？</string>
+        <string name="will_uploads_current_device_data">将会使用当前用户上传记录</string>u
+        <string name="glucose">血糖值(mmol/L)</string>
+        <string name="type">类型</string>
+        <string name="measure_peo">测量人</string>
+
+        <string name="dayOfthreeTemp">体温三测单</string>
+        <string name="search_View">请输入病人编号、姓名进行搜索</string>
+        <string name="search">搜索</string>
+        <string name="search_icon">&#xe8ba;</string>
+
+
+
+        <string-array name="array_synchro">
+            <item>已同步</item>
+            <item>未同步</item>
+            <item>同步失败</item>
+        </string-array>
+</resources>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context=".ui.activity.MainActivity"
+    tools:ignore="MissingConstraints">
+
+    <Button
+        android:id="@+id/bt_setting"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toBottomOf="@+id/bt_measure"
+        android:layout_marginTop="16dp"
+        android:text="跳转到设置页面" />
+
+    <Button
+        android:id="@+id/bt_permission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="开启定位权限" />
+
+    <Button
+        android:id="@+id/bt_ble_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_permission"
+        android:layout_marginTop="16dp"
+        android:text="跳转到蓝牙列表页面" />
+
+    <Button
+        android:id="@+id/bt_measure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ble_list"
+        android:layout_marginTop="16dp"
+        android:text="跳转到生命体征测量页面" />
+
+
+    <Button
+        android:id="@+id/bt_query"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toBottomOf="@+id/bt_setting"
+        android:layout_marginTop="16dp"
+        android:text="跳转到查房记录页面" />
+
+    <Button
+        android:id="@+id/bt_patientInfo"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintTop_toBottomOf="@+id/bt_query"
+        android:layout_marginTop="16dp"
+        android:text="患者详情" />
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@+id/bt_patientInfo"
+        android:layout_marginTop="10dp"
+        app:layoutManager="android.support.v7.widget.LinearLayoutManager"/>
+
+</android.support.constraint.ConstraintLayout>

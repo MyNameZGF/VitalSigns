@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.MeasureActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+        <com.hjq.bar.TitleBar
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            app:barStyle="night"
+            app:drawableSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:leftSize="14sp"
+            app:rightSize="14sp"
+            app:leftTitle="@string/back"
+            app:title="@string/sigs_measure_title"
+            app:titleSize="16sp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="center"
+                android:layout_marginRight="10dp">
+
+                <com.coorchice.library.SuperTextView
+                    android:id="@+id/st_reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginRight="20dp"
+                    android:text="@string/reset_measure"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toLeftOf="@+id/st_save"
+                    app:stv_isShowState="true"
+                    android:drawableLeft="@drawable/refresh"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="5dp"
+                    app:stv_state_drawable_height="16dp"
+                    app:stv_state_drawable_mode="right"
+                    app:stv_state_drawable_padding_left="0dp"
+                    app:stv_state_drawable_width="16dp" />
+
+                <com.coorchice.library.SuperTextView
+                    android:id="@+id/st_save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/save_report"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="14sp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:drawableLeft="@drawable/save"
+                    android:drawableTint="@color/white"
+                    android:drawablePadding="5dp"
+                    app:stv_isShowState="true"/>
+<!--                app:stv_pressBgColor="@color/item_bg"-->
+
+            </LinearLayout>
+
+
+        </com.hjq.bar.TitleBar>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp">
+
+        <TextView
+            android:id="@+id/tv_bedNO"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="1-01床"
+            android:gravity="center"
+            android:textColor="@color/titleColor"
+            android:layout_marginLeft="16dp"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="张翠山"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/titleColor"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="住院号：242541"
+            android:textColor="@color/titleColor"
+            android:textSize="18sp"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <TextView
+                android:id="@+id/tv_select_patient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewshape"
+                android:layout_marginLeft="16dp"
+                android:gravity="center"
+                android:text="@string/select_patient"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/test"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textviewshape"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="测试录入信息"
+                android:textColor="@color/colorPrimary"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_select_patient_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:text="@string/select_patient_tip"
+            android:textColor="@color/titleColor"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_measure"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:overScrollMode="never" />
+
+</LinearLayout>

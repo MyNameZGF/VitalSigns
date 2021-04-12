@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--血糖历史统计数据-->
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_corner_6_white"
+    android:padding="16dp"
+    android:translationZ="1dp"
+    tools:ignore="MissingConstraints">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/titleColor"
+        android:textSize="16sp"
+        android:text="@string/no_data"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_startTime"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:gravity="center"
+        android:text="2021-1-1"
+        android:textSize="12sp"
+        android:drawablePadding="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toRightOf="@+id/tv_title"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="2dp"
+        android:background="@drawable/shape_corner_15_translate"
+        android:textColor="#222222"
+        android:drawableRight="@drawable/ic_date"/>
+    <TextView
+        android:id="@+id/middle_font"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        app:layout_constraintLeft_toRightOf="@+id/tv_startTime"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:gravity="center"
+        android:text="至"
+        android:textColor="@color/black"
+        />
+    <TextView
+        android:id="@+id/tv_endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:gravity="center"
+        android:text="2021-2-4"
+        android:textSize="12sp"
+        android:drawablePadding="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:textColor="#222222"
+        app:layout_constraintLeft_toRightOf="@+id/middle_font"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/shape_corner_15_translate"
+        android:drawableRight="@drawable/ic_date"/>
+
+    <Button
+        android:id="@+id/tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="50px"
+        android:textColor="@color/colorPrimary"
+        android:background="@drawable/btn_shape"
+
+        android:text="@string/search"
+        android:paddingLeft="40px"
+        android:paddingRight="40px"
+        android:gravity="center"
+        android:textSize="13sp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_startTime"
+        app:layout_constraintTop_toTopOf="@+id/tv_startTime"
+        app:layout_constraintLeft_toRightOf="@+id/tv_endTime"
+        />
+
+    <Button
+        android:id="@+id/view"
+        android:layout_width="130px"
+        android:layout_height="60px"
+        android:text="详细数据"
+        android:textSize="13sp"
+        android:layout_marginRight="130px"
+        android:background="@drawable/btn_shape"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/view2"
+        android:layout_width="130px"
+        android:layout_height="60px"
+        android:text="统计图表"
+        android:textSize="13sp"
+        android:background="@drawable/btn_shape"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <FrameLayout
+        android:id="@+id/fl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/view"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,63 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--字体阴影效果-->
+    <style name="TextShadowStyle">
+        <item name="android:shadowColor">@color/transparent</item>
+        <item name="android:shadowRadius">1</item>
+        <item name="android:shadowDx">1</item>
+        <item name="android:shadowDy">1</item>
+    </style>
+
+    <style name="TextShadowStyle3">
+        <item name="android:shadowColor">#ff222222</item>
+        <item name="android:shadowRadius">5</item>
+        <item name="android:shadowDx">5</item>
+        <item name="android:shadowDy">5</item>
+    </style>
+
+<!--  EditText 下划线  -->
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#E6E6E6</item>
+        <item name="colorControlActivated">@color/black</item>
+    </style>
+
+    <!--  EditText 下划线  -->
+    <style name="MyEditText2" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#E6E6E6</item>
+        <item name="colorControlActivated">#E6E6E6</item>
+    </style>
+
+
+    <!--    TabLayout的样式-->
+    <style name="TabTextSize" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <!--  加载框样式  -->
+    <style name="LoadingDialog" parent="@android:style/Theme.Holo.Dialog.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="TextSize" parent="TextAppearance.AppCompat.Widget.TextView.SpinnerItem">
+        <item name="android:textSize">15px</item>
+        <item name="android:textColor">@color/red</item>
+    </style>
+
+
+
+</resources>

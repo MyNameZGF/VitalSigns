@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 体温单view -->
+    <declare-styleable name="TemperatureChartView">
+        <attr name="tep_title_bg" format="reference|color" />
+        <attr name="tep_title_row_height" format="dimension" /><!-- 一行标题栏的高度 -->
+        <attr name="tep_title_text_size" format="dimension" /><!--标题字体大小 -->
+        <attr name="tep_title_text_color" format="color" /><!--标题颜色 -->
+        <attr name="tep_title_column_width" format="dimension" /><!-- 标题一列的宽度 -->
+        <attr name="tep_title_column_count" format="integer" /><!-- 标题一共有多少列 -->
+        <attr name="tep_title_row_count" format="integer" /><!-- 有多少行标题-->
+
+        <!-- 中间格子标题 也就是时间那一行的标题-->
+        <attr name="tep_center_cell_title_size" format="dimension" /><!--中间格子标题字体大小 -->
+        <attr name="tep_center_cell_title_color" format="color" /><!--中间格子标题颜色 -->
+        <attr name="tep_center_cell_title_2_level_size" format="dimension" /><!--中间格子二级标题的字体大小 -->
+        <attr name="tep_center_cell_title_2_level_color" format="color" /><!--中间格子二级标题的颜色 -->
+        <attr name="tep_center_cell_row_height" format="dimension" /><!--  中间格子一行的行高-->
+        <attr name="tep_center_cell_row_count" format="integer" /><!-- 有多少行格子-->
+        <attr name="tep_center_cell_child_1_level_column_count" format="integer" /><!-- 中间一级标题有多少列-->
+        <attr name="tep_center_cell_child_2_level_column_count" format="integer" /><!-- 中间二级级标题有多少列-->
+        <attr name="tep_center_cell_row_child" format="integer" /><!-- 中间格子一行有多少个小格子-->
+
+        <attr name="tep_left_bg" format="reference|color" />
+        <attr name="tep_left_text_size" format="dimension" />
+        <attr name="tep_left_text_color" format="color" />
+        <attr name="tep_left_column_width" format="dimension" /><!--  右边那列的宽度-->
+
+        <attr name="tep_right_bg" format="reference|color" />
+        <attr name="tep_right_text_size" format="dimension" />
+        <attr name="tep_right_text_color" format="color" />
+        <attr name="tep_right_column_width" format="dimension" /><!--  右边那列的宽度-->
+
+        <attr name="tep_cell_line_size" format="float" /><!--一级网格线的大小 -->
+        <attr name="tep_cell_line_color" format="color" />
+        <attr name="tep_cell_line_2_level_size" format="float" /><!--二级级网格线的大小 -->
+        <attr name="tep_cell_line_2_level_color" format="color" />
+
+        <attr name="tep_bottom_row_height" format="dimension" /><!-- 底部一行的行高 -->
+        <attr name="tep_bottom_row_count" format="integer" /><!-- 有多少行格子-->
+        <attr name="tep_bottom_text_size" format="dimension" /><!-- -->
+        <attr name="tep_bottom_text_color" format="color" /><!-- -->
+        <attr name="tep_bottom_bg" format="reference|color" /><!-- -->
+    </declare-styleable>
+</resources>

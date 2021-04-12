@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/item"
+    android:translationZ="1dp"
+    android:background="@color/colorWhite"
+    tools:context=".ui.activity.MeasureActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <TextView
+        android:id="@+id/tv_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/body_temperature"
+        android:textColor="@color/titleColor80"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <com.xincheng.linechart.SuitLines
+        android:id="@+id/suitlines"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="@android:color/transparent"
+        app:needEdgeEffect="false"
+        app:needClickHint="false"
+        app:maxOfVisible="21"
+        app:colorHint="@color/titleColor80"
+        app:xyColor="@color/titleColor80"
+        app:lineType="curve" />
+
+
+  <!--  <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_label"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="@string/no_data"
+        android:textColor="@color/titleColor80"
+        android:textSize="36sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="31dp" />
+
+    <ImageView
+        android:id="@+id/iv_over"
+        android:layout_width="8dp"
+        android:layout_height="13dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="@+id/tv_result"
+        app:layout_constraintLeft_toRightOf="@+id/tv_result"
+        android:layout_marginLeft="5dp"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_over_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/iv_over"
+        app:layout_constraintLeft_toRightOf="@+id/iv_over"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/colorRed"
+        android:text="@string/uptitled"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_result"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/input_enter"
+        android:textSize="12sp"
+        style="@style/TextShadowStyle"/>
+
+    <TextView
+        android:id="@+id/tv_before"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result"
+        app:layout_constraintLeft_toLeftOf="@+id/tv_result"
+        android:textColor="@color/titleColor"
+        android:text="@string/before"
+        android:textSize="9sp" />
+
+    <TextView
+        android:id="@+id/tv_swith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_result"
+        app:layout_constraintLeft_toRightOf="@+id/tv_before"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/swith"
+        android:textSize="9sp"
+        android:layout_marginLeft="10dp"
+        style="@style/TextShadowStyle"/>-->
+
+</android.support.constraint.ConstraintLayout>
