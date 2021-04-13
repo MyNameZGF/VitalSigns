@@ -11,6 +11,7 @@ public class WifiBean {
     private int signal;//信号
     private String password;
     private boolean lastItem;
+    private int a;
 
     private boolean openWifi;
 
