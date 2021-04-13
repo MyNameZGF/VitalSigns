@@ -30,6 +30,7 @@ public class PatientMeasure {
     private Integer shit_clyster_before;//灌肠前次数
     private Integer shit_clyster_after;//灌肠后次数
     private Integer clyster_count;//灌肠次数
+    private String bowData;//血氧波
 
 
     public PatientMeasure(){
@@ -38,7 +39,7 @@ public class PatientMeasure {
 
     @Override
     public String toString() {
-        return "PatientMeasureDataBean{" +
+        return "PatientMeasure{" +
                 "id=" + id +
                 ", id_number='" + id_number + '\'' +
                 ", inspectorId='" + inspectorId + '\'' +
@@ -61,8 +62,36 @@ public class PatientMeasure {
                 ", shit_clyster_before=" + shit_clyster_before +
                 ", shit_clyster_after=" + shit_clyster_after +
                 ", clyster_count=" + clyster_count +
+                ", bowData='" + bowData + '\'' +
                 '}';
     }
+
+    public PatientMeasure(long id, String id_number, String inspectorId, String inspectorName, int status, Date check_time, Float temperature, Float blood_oxygen, String pressure, Float glucose, Integer glucose_type, Float pulse_rate, Integer breathe, Integer pee_type, Integer pee_no_conduit, Float pee_volume_no_conduit, Float pee_volume_conduit, Integer shit_type, Integer shit_count, Integer shit_clyster_before, Integer shit_clyster_after, Integer clyster_count, String bowData) {
+        this.id = id;
+        this.id_number = id_number;
+        this.inspectorId = inspectorId;
+        this.inspectorName = inspectorName;
+        this.status = status;
+        this.check_time = check_time;
+        this.temperature = temperature;
+        this.blood_oxygen = blood_oxygen;
+        this.pressure = pressure;
+        this.glucose = glucose;
+        this.glucose_type = glucose_type;
+        this.pulse_rate = pulse_rate;
+        this.breathe = breathe;
+        this.pee_type = pee_type;
+        this.pee_no_conduit = pee_no_conduit;
+        this.pee_volume_no_conduit = pee_volume_no_conduit;
+        this.pee_volume_conduit = pee_volume_conduit;
+        this.shit_type = shit_type;
+        this.shit_count = shit_count;
+        this.shit_clyster_before = shit_clyster_before;
+        this.shit_clyster_after = shit_clyster_after;
+        this.clyster_count = clyster_count;
+        this.bowData = bowData;
+    }
+
 
     public long getId() {
         return id;
@@ -112,19 +141,19 @@ public class PatientMeasure {
         this.check_time = check_time;
     }
 
-    public float getTemperature() {
+    public Float getTemperature() {
         return temperature;
     }
 
-    public void setTemperature(float temperature) {
+    public void setTemperature(Float temperature) {
         this.temperature = temperature;
     }
 
-    public float getBlood_oxygen() {
+    public Float getBlood_oxygen() {
         return blood_oxygen;
     }
 
-    public void setBlood_oxygen(float blood_oxygen) {
+    public void setBlood_oxygen(Float blood_oxygen) {
         this.blood_oxygen = blood_oxygen;
     }
 
@@ -136,11 +165,11 @@ public class PatientMeasure {
         this.pressure = pressure;
     }
 
-    public float getGlucose() {
+    public Float getGlucose() {
         return glucose;
     }
 
-    public void setGlucose(float glucose) {
+    public void setGlucose(Float glucose) {
         this.glucose = glucose;
     }
 
@@ -152,11 +181,11 @@ public class PatientMeasure {
         this.glucose_type = glucose_type;
     }
 
-    public float getPulse_rate() {
+    public Float getPulse_rate() {
         return pulse_rate;
     }
 
-    public void setPulse_rate(float pulse_rate) {
+    public void setPulse_rate(Float pulse_rate) {
         this.pulse_rate = pulse_rate;
     }
 
@@ -184,19 +213,19 @@ public class PatientMeasure {
         this.pee_no_conduit = pee_no_conduit;
     }
 
-    public float getPee_volume_no_conduit() {
+    public Float getPee_volume_no_conduit() {
         return pee_volume_no_conduit;
     }
 
-    public void setPee_volume_no_conduit(float pee_volume_no_conduit) {
+    public void setPee_volume_no_conduit(Float pee_volume_no_conduit) {
         this.pee_volume_no_conduit = pee_volume_no_conduit;
     }
 
-    public float getPee_volume_conduit() {
+    public Float getPee_volume_conduit() {
         return pee_volume_conduit;
     }
 
-    public void setPee_volume_conduit(float pee_volume_conduit) {
+    public void setPee_volume_conduit(Float pee_volume_conduit) {
         this.pee_volume_conduit = pee_volume_conduit;
     }
 
@@ -240,28 +269,11 @@ public class PatientMeasure {
         this.clyster_count = clyster_count;
     }
 
-    public PatientMeasure(long id, String id_number, String inspectorId, String inspectorName, int status, Date check_time, float temperature, float blood_oxygen, String pressure, float glucose, Integer glucose_type, float pulse_rate, Integer breathe, Integer pee_type, Integer pee_no_conduit, float pee_volume_no_conduit, float pee_volume_conduit, Integer shit_type, Integer shit_count, Integer shit_clyster_before, Integer shit_clyster_after, Integer clyster_count) {
-        this.id = id;
-        this.id_number = id_number;
-        this.inspectorId = inspectorId;
-        this.inspectorName = inspectorName;
-        this.status = status;
-        this.check_time = check_time;
-        this.temperature = temperature;
-        this.blood_oxygen = blood_oxygen;
-        this.pressure = pressure;
-        this.glucose = glucose;
-        this.glucose_type = glucose_type;
-        this.pulse_rate = pulse_rate;
-        this.breathe = breathe;
-        this.pee_type = pee_type;
-        this.pee_no_conduit = pee_no_conduit;
-        this.pee_volume_no_conduit = pee_volume_no_conduit;
-        this.pee_volume_conduit = pee_volume_conduit;
-        this.shit_type = shit_type;
-        this.shit_count = shit_count;
-        this.shit_clyster_before = shit_clyster_before;
-        this.shit_clyster_after = shit_clyster_after;
-        this.clyster_count = clyster_count;
+    public String getBowData() {
+        return bowData;
+    }
+
+    public void setBowData(String bowData) {
+        this.bowData = bowData;
     }
 }

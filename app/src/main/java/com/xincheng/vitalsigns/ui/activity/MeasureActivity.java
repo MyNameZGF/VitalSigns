@@ -63,7 +63,6 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
     private TextView tv_select_patient;
     private TextView tv_select_patient_tip;
     private RecyclerView rv_measure;
-    private List<Unit> lines;
     private BloodTypeBean bloodTypeBean = new BloodTypeBean(1, 0, "随机", 0);
 
 
@@ -80,8 +79,9 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
     private BloodSugarDialog bloodSugarDialog;
     private LoadingDialog loadingDialog;
     private SuitLines suitlines;
+    private List<Unit> lines;
     private PatientMeasure measureDataBean;
-    DecimalFormat df = new DecimalFormat( "#0.#####" );
+    DecimalFormat df = new DecimalFormat("#0.#####");
 
 
     @Override
@@ -138,7 +138,7 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
             switch (inputType) {
                 case 0://温度
                     Log.d(TAG, "test: 温度" + index);
-                    measureDataBean.setTemperature((float)36.1);
+                    measureDataBean.setTemperature((float) 36.1);
                     measureBean = findMeasureBeanInputType(inputType);
                     measureBean.setResult("36C°");
                     adapter.refreshNotifyItemChanged(index);
@@ -146,7 +146,7 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
                     break;
                 case 1://血氧
                     Log.d(TAG, "test: 血氧" + index);
-                    measureDataBean.setBlood_oxygen((float)96);
+                    measureDataBean.setBlood_oxygen((float) 96);
                     measureBean = findMeasureBeanInputType(inputType);
                     measureBean.setResult("96%");
                     adapter.refreshNotifyItemChanged(index);
@@ -176,7 +176,35 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
                     measureBean = findMeasureBeanInputType(inputType);
                     measureBean.setResult("72");
                     adapter.refreshNotifyItemChanged(index);
-                    inputType++;
+                    inputType = 8;
+                    break;
+                case 8://血氧波
+                    Log.d(TAG, "test: 血氧波" + index);
+                    //TODO 这里的数据后续需要从设备里面获取。
+                    lines = new ArrayList<Unit>();
+                    lines = new ArrayList<>();
+                    lines.add(new Unit(10, ""));
+                    lines.add(new Unit(3, ""));
+                    lines.add(new Unit(3, ""));
+                    lines.add(new Unit(4, ""));
+                    lines.add(new Unit(10, ""));
+                    lines.add(new Unit(8, ""));
+                    lines.add(new Unit(5, ""));
+                    lines.add(new Unit(4, ""));
+                    lines.add(new Unit(3.6f, ""));
+                    lines.add(new Unit(10f, ""));
+                    lines.add(new Unit(4.8f, ""));
+                    lines.add(new Unit(4.4f, ""));
+                    lines.add(new Unit(3.2f, ""));
+                    lines.add(new Unit(10f, ""));
+                    suitlines.feedWithAnim(lines);
+
+                    //保存数据
+                    List<Float> bowDatas = new ArrayList<>();
+                    for (int i = 0; i < lines.size(); i++) {
+                        bowDatas.add(lines.get(i).getValue());
+                    }
+                    measureDataBean.setBowData(bowDatas.toString());
                     break;
             }
         } else {
@@ -358,8 +386,9 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
                                                             item.getData().setResult(String.valueOf(bean.getShit_count()));
                                                         } else {
                                                             measureDataBean.setShit_type(2);
+                                                            measureDataBean.setShit_clyster_before(bean.getShit_clyster_before());
                                                             measureDataBean.setShit_clyster_after(bean.getShit_clyster_after());
-                                                            measureDataBean.setShit_clyster_after(bean.getShit_clyster_after());
+                                                            measureDataBean.setClyster_count(bean.getClyster_count());
                                                             item.getData().setResult(bean.getShit_clyster_after() + " " + bean.getShit_clyster_before() + "/" + bean.getClyster_count() + "E");
                                                         }
                                                         int customBeanByMode = findCustomBeanByMode(item.getData().getInputType());
@@ -383,24 +412,23 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
                             suitlines.setLineForm(true);
                             suitlines.showX(false);
                             suitlines.showY(false);
-                            List<Unit> lines1 = (List<Unit>) item.getData().getChartDatas();
                             //TODO 这里的数据后续需要从设备里面获取。
+                            lines = new ArrayList<Unit>();
                             lines = new ArrayList<>();
-                            lines.add(new Unit(10, ""));
-                            lines.add(new Unit(3, ""));
-                            lines.add(new Unit(3, ""));
-                            lines.add(new Unit(4, ""));
-                            lines.add(new Unit(10, ""));
-                            lines.add(new Unit(8, ""));
-                            lines.add(new Unit(5, ""));
-                            lines.add(new Unit(4, ""));
-                            lines.add(new Unit(3.6f, ""));
-                            lines.add(new Unit(10f, ""));
-                            lines.add(new Unit(4.8f, ""));
-                            lines.add(new Unit(4.4f, ""));
-                            lines.add(new Unit(3.2f, ""));
-                            lines.add(new Unit(10f, ""));
-                            suitlines.feedWithAnim(lines);
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
+                            lines.add(new Unit(0, ""));
                             break;
                     }
                 }
@@ -508,23 +536,25 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
                 break;
 
             case R.id.st_save:
+                if (measureDataBean.getId_number() == null || measureDataBean.getId_number().trim().length() == 0) {
+                    toast("请选择病人");
+                    return;
+                }
+                measureDataBean.setInspectorId("u10001");
+                measureDataBean.setInspectorName("王医生");
                 loadingDialog = new LoadingDialog(this, "正在保存");
                 loadingDialog.show();
-
+                Log.d(TAG, "数据打印: " + measureDataBean.toString());
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Log.d(TAG, "保存数据: "+measureDataBean.toString());
-
                         loadingDialog.dismiss();
                         toast(getString(R.string.save_sucess));
                     }
-
                 }, 2000);
                 break;
             case R.id.tv_select_patient:
                 startActivityForResult(new Intent(MeasureActivity.this, SelectPatientActivity.class), REQUEST_CODE);
-                //TODO 选择病人
                 break;
         }
     }
@@ -599,6 +629,8 @@ public class MeasureActivity extends BaseActivity implements View.OnClickListene
             tv_ad.setText("住院号：" + patientsBean.getId_number());
 
             tv_select_patient_tip.setVisibility(View.GONE);
+
+            measureDataBean.setId_number(patientsBean.getId_number());
         }
     }
 
